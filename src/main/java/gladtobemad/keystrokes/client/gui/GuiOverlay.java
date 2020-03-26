@@ -260,13 +260,12 @@ public class GuiOverlay {
             } else if (keyEvent.getKey() == keybinds[5].getKey().getKeyCode()) {
                 right_clicks.add(System.currentTimeMillis());
             }
-        }
-        if (event instanceof MouseInputEvent) {
-            MouseInputEvent keyEvent = (MouseInputEvent) event;
-            if (keyEvent.getAction() != GLFW.GLFW_PRESS) return;
-            if (keyEvent.getButton() == keybinds[4].getKey().getKeyCode()) {
+        } else if (event instanceof MouseInputEvent) {
+            MouseInputEvent mouseEvent = (MouseInputEvent) event;
+            if (mouseEvent.getAction() != GLFW.GLFW_PRESS) return;
+            if (mouseEvent.getButton() == keybinds[4].getKey().getKeyCode()) {
                 left_clicks.add(System.currentTimeMillis());
-            } else if (keyEvent.getButton() == keybinds[5].getKey().getKeyCode()) {
+            } else if (mouseEvent.getButton() == keybinds[5].getKey().getKeyCode()) {
                 right_clicks.add(System.currentTimeMillis());
             }
         }
