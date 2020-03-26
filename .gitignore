@@ -14,12 +14,18 @@ out
 .idea
 
 # gradle
+gradle
 build
 .gradle
+build.gradle
+gradle.properties
+gradlew
+gradlew.bat
 
 # other
 eclipse
 run
+.DS_Store
 
 # Files from Forge MDK
 forge*changelog.txt
